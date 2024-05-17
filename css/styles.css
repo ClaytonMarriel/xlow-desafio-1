@@ -1,61 +1,85 @@
 
-header{
-  height: 3rem;
-  margin: 1rem 1rem;
-  font-weight: bold;
+header {
   display: flex;
   justify-content: space-between;
+  margin: 2rem 1rem;
 }
+.products-container {
+  padding: 20px;
+}
+
 .products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.products.five-per-line {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .card-products {
-  width: calc(100% - 20px); /* A largura do card será 100% da largura do contêiner pai, menos 20px de margem */
-  margin-bottom: 20px;
-  /* border: 1px solid red; */
-  height: auto; /* A altura do card se ajustará ao conteúdo */
-  padding: 10px; /* Adiciona um pouco de espaço interno ao card */
-  margin-left: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 .product-image {
-  width: 100%; /* A imagem ocupará toda a largura do card */
-  height: auto; /* A altura se ajustará automaticamente para manter a proporção */
+  width: 140px;
 }
 
 .product-name {
-  margin-top: 10px; /* Espaçamento entre a imagem e o nome do produto */
-  font-size: 14px;
+  margin: 10px 0;
 }
 
 .product-price {
-  margin-top: 5px; /* Espaçamento entre o nome do produto e o preço */
+  margin: 10px 0;
+}
+
+.button-container {
+  margin-top: 10px;
 }
 
 .product-button {
-  width: 100%; /* O botão ocupará toda a largura do card */
-  height: 30px;
-  margin-top: 10px; /* Espaçamento entre o preço e o botão */
-  background-color: #FFF;
-  border: 1px solid gray;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
   cursor: pointer;
 }
-.product-button:hover{
-  background-color: gray;
 
+.product-button:hover {
+  background-color: #0056b3;
 }
 
-/* Media query para ajustar o layout para telas maiores */
-@media screen and (min-width: 768px) {
-  .card-products {
-    width: calc(20% - 20px); /* Em telas maiores, o card ocupará 20% da largura do contêiner pai, com margem entre os cards */
-    
+/* Responsividade */
+@media (max-width: 1200px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .card-products:nth-child(5n) {
-    margin-right: 0; /* Remove a margem do último card de cada linha */
+
+  .products.five-per-line {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products.five-per-line {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .products.five-per-line {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
