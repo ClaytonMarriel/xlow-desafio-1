@@ -1,0 +1,61 @@
+
+header{
+  height: 3rem;
+  margin: 1rem 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card-products {
+  width: calc(100% - 20px); /* A largura do card será 100% da largura do contêiner pai, menos 20px de margem */
+  margin-bottom: 20px;
+  /* border: 1px solid red; */
+  height: auto; /* A altura do card se ajustará ao conteúdo */
+  padding: 10px; /* Adiciona um pouco de espaço interno ao card */
+  margin-left: 10px;
+}
+
+.product-image {
+  width: 100%; /* A imagem ocupará toda a largura do card */
+  height: auto; /* A altura se ajustará automaticamente para manter a proporção */
+}
+
+.product-name {
+  margin-top: 10px; /* Espaçamento entre a imagem e o nome do produto */
+  font-size: 14px;
+}
+
+.product-price {
+  margin-top: 5px; /* Espaçamento entre o nome do produto e o preço */
+}
+
+.product-button {
+  width: 100%; /* O botão ocupará toda a largura do card */
+  height: 30px;
+  margin-top: 10px; /* Espaçamento entre o preço e o botão */
+  background-color: #FFF;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+.product-button:hover{
+  background-color: gray;
+
+}
+
+/* Media query para ajustar o layout para telas maiores */
+@media screen and (min-width: 768px) {
+  .card-products {
+    width: calc(20% - 20px); /* Em telas maiores, o card ocupará 20% da largura do contêiner pai, com margem entre os cards */
+    
+  }
+  .card-products:nth-child(5n) {
+    margin-right: 0; /* Remove a margem do último card de cada linha */
+  }
+}
