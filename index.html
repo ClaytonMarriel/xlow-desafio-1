@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.css">
-  <title>XLOW - Desafio 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XLOW - Desafio 1</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-  <header class="header-container">
-    <span id="total-products">...</span>
-    <button id="toggle-layout">Alternar visualização</button>
-  </header>
-  <div class="products-container">
-    <div class="products"></div>
-  </div>
-  <script src="./js/search.js"></script>
+    <header>
+        <div id="total-products"></div>
+        <button id="toggle-layout">Alterar visualização</button>
+    </header>
+    
+    <div id="loading">Loading...</div>
+    <div class="products-container">
+        <div class="products"></div>
+    </div>
+    
+    <script src="./js/api.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
