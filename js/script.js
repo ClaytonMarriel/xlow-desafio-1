@@ -95,7 +95,7 @@ function criarCardProduto(detalhesProduto) {
   
     const botaoElement = document.createElement('button');
     botaoElement.classList.add('product-button');
-    botaoElement.textContent = 'Comprar';
+    botaoElement.textContent = 'COMPRAR';
   
     cardProduto.appendChild(imagemElement);
     cardProduto.appendChild(nomeElement);

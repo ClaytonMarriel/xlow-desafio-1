@@ -31,7 +31,7 @@ header {
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  min-height: 400px;
+  min-height: 300px;
 }
 
 .product-image {
@@ -77,15 +77,11 @@ header {
 
 .product-button {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
+  background-color: #FFF;
+  color: gray;
+  border: 1px solid gray;
   cursor: pointer;
-  width: 300px;
-}
-
-.product-button:hover {
-  background-color: #0056b3;
+  width: 200px;
 }
 
 #toggle-layout {
